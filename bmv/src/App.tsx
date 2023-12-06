@@ -7,6 +7,7 @@ import Welcome from './comps/welcome';
 import Intro from './comps/intro';
 import Projects from './comps/projects';
 function App() {
+
   return (
     <>
       <style>

@@ -23,8 +23,10 @@ function Projects() {
       title:"dingus"
     }
   ]
+  const critical = 0.66;
+  const modifier = 0.33;
   const [hovered, setHover] = useState(false);
-  const [currentSlide, setSlide] = useState(true);
+  const [currentSlide, setSlide] = useState(0.33);
 
   const [project1, setProject1] = useState(0);
   const [project2, setProject2] = useState(1);
@@ -46,15 +48,16 @@ function Projects() {
     };
   }, [hovered]);
 
-  useEffect(() => {
-    // This effect runs whenever currentSlide changes
-    // You can add your animation logic here
-    console.log('Animation triggered!');
-  }, [currentSlide]);
+  
 
   const slide = () => {
-    setSlide(false);
-    setSlide(true);
+    if(currentSlide >= critical){
+      setSlide(0);
+      return
+    }
+    setSlide(currentSlide+modifier);
+    return
+
     setProject1((prevProject1) => (prevProject1 + 1) % projectData.length);
     setProject2((prevProject2) => (prevProject2 + 1) % projectData.length);
     setProject3((prevProject3) => (prevProject3 + 1) % projectData.length);
@@ -73,11 +76,14 @@ function Projects() {
   return (
     <section className='Projects'>
         <h2 className='Projects__title'>Onze Projecten</h2>
-        <ul className='Projects__projects'>
+        <div className='Projects__wrapper'
+        style={{ transform: `translateX(${-currentSlide * 100}%)` }}
+        >
+          <ul className='Projects__projects'>
             <li
               onMouseEnter={()=>{handleHover(true)}}
               onMouseLeave={()=>{handleHover(false)}} 
-              className={`Projects__project ${hovered === false ? 'fadeIn' : ''}`}
+              className={`Projects__project`}
             >
               <Project image={projectData[project1].image} 
                 title={projectData[project1].title} color={"yellow"}>
@@ -87,7 +93,7 @@ function Projects() {
             <li
               onMouseEnter={()=>{handleHover(true)}}
               onMouseLeave={()=>{handleHover(false)}} 
-              className={`Projects__project ${hovered === false ? 'fadeIn' : ''}`}
+              className={`Projects__project`}
             >
               <Project image={projectData[project2].image} 
                 title={projectData[project2].title} color={"yellow"}>
@@ -97,13 +103,83 @@ function Projects() {
             <li
               onMouseEnter={()=>{handleHover(true)}}
               onMouseLeave={()=>{handleHover(false)}} 
-              className={`Projects__project ${hovered === false ? 'fadeIn' : ''}`}
+              className={`Projects__project`}
             >
               <Project image={projectData[project3].image} 
                 title={projectData[project3].title} color={"yellow"}>
               </Project>
             </li> 
-        </ul>
+          </ul>
+          <ul className='Projects__projects'>
+            <li
+              onMouseEnter={()=>{handleHover(true)}}
+              onMouseLeave={()=>{handleHover(false)}} 
+              className={`Projects__project`}
+            >
+              <Project image={projectData[project1].image} 
+                title={projectData[project1].title} color={"yellow"}>
+              </Project>
+            </li> 
+
+            <li
+              onMouseEnter={()=>{handleHover(true)}}
+              onMouseLeave={()=>{handleHover(false)}} 
+              className={`Projects__project`}
+            >
+              <Project image={projectData[project2].image} 
+                title={projectData[project2].title} color={"yellow"}>
+              </Project>
+            </li> 
+
+            <li
+              onMouseEnter={()=>{handleHover(true)}}
+              onMouseLeave={()=>{handleHover(false)}} 
+              className={`Projects__project`}
+            >
+              <Project image={projectData[project3].image} 
+                title={projectData[project3].title} color={"yellow"}>
+              </Project>
+            </li> 
+          </ul>
+          <ul className='Projects__projects'>
+            <li
+              onMouseEnter={()=>{handleHover(true)}}
+              onMouseLeave={()=>{handleHover(false)}} 
+              className={`Projects__project`}
+            >
+              <Project image={projectData[project1].image} 
+                title={projectData[project1].title} color={"yellow"}>
+              </Project>
+            </li> 
+
+            <li
+              onMouseEnter={()=>{handleHover(true)}}
+              onMouseLeave={()=>{handleHover(false)}} 
+              className={`Projects__project`}
+            >
+              <Project image={projectData[project2].image} 
+                title={projectData[project2].title} color={"yellow"}>
+              </Project>
+            </li> 
+
+            <li
+              onMouseEnter={()=>{handleHover(true)}}
+              onMouseLeave={()=>{handleHover(false)}} 
+              className={`Projects__project`}
+            >
+              <Project image={projectData[project3].image} 
+                title={projectData[project3].title} color={"yellow"}>
+              </Project>
+            </li> 
+          </ul>
+        </div>
+        <figure className="slideshowDots">
+          <div className="slideshowDot"></div>
+          <div className="slideshowDot"></div>
+          <div className="slideshowDot"></div>
+        
+      </figure>
+        
     </section>
   );
 }
