@@ -26,7 +26,7 @@ function Projects() {
   const critical = 0.66;
   const modifier = 0.33;
   const [hovered, setHover] = useState(false);
-  const [currentSlide, setSlide] = useState(0.33);
+  const [currentSlide, setSlide] = useState(0);
 
   const [project1, setProject1] = useState(0);
   const [project2, setProject2] = useState(1);
@@ -51,17 +51,18 @@ function Projects() {
   
 
   const slide = () => {
-    if(currentSlide >= critical){
-      setSlide(0);
-      return
-    }
-    setSlide(currentSlide+modifier);
-    return
-
-    setProject1((prevProject1) => (prevProject1 + 1) % projectData.length);
-    setProject2((prevProject2) => (prevProject2 + 1) % projectData.length);
-    setProject3((prevProject3) => (prevProject3 + 1) % projectData.length);
+    setSlide((prevCurrentSlide) => {
+      const newSlide = prevCurrentSlide + modifier;
+  
+      if (newSlide >= 0.99) {
+        
+        return 0;
+      }
+  
+      return newSlide;
+    });
   };
+  
 
   const handleHover = (hovering:boolean)=>{
 
