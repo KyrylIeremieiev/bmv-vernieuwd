@@ -120,8 +120,10 @@ function Projects() {
                   onMouseLeave={()=>{handleHover(false)}} 
                   className={`Projects__project`}
                 >
-                  <Project image={item.image} 
-                    title={item.title} color={"yellow"}>
+                  <Project 
+                    image={item.image} 
+                    title={item.title}
+                  >
                   </Project>
                 </li>             
               ))}
@@ -129,8 +131,17 @@ function Projects() {
         ))}
         </div>
         <figure className="slideshowDots">
-          {projectData.map((title, index) => (
-              <div className="slideshowDot"></div>
+          {projectData.map((title, idx) => (
+            <div
+              key={idx}
+              className={`slideshowDot${idx === currentSlide / modifier ? " active" : ""}`}
+              onClick={()=>{
+                setSlide(idx*modifier);
+              }}
+              onMouseEnter={()=>{handleHover(true)}}
+              onMouseLeave={()=>{handleHover(false)}} 
+            >
+            </div>
           ))}
       </figure>
         
