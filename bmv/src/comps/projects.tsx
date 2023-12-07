@@ -1,57 +1,64 @@
 import { useState, useEffect } from 'react';
 import  Project  from './subComps/project';
-import Project1Img from '../img/banner.jpeg'
+import Spinoza20 from '../img/banner.jpeg'
+import AICS from '../img/niewbouw.jpeg';
+import BosTheater from '../img/bostheater.jpeg';
+import WereldBurger from '../img/wereldburger.jpeg';
+import SMuseum from '../img/slavernijmuseum.png';
+import AMuseum from '../img/amuseum.jpeg';
+import AFC from '../img/afc.jpeg';
+import NWO from '../img/nwo.png'
 function Projects() {
   const projectData= [
     [
       {
-        image:Project1Img,
+        image:Spinoza20,
         title:"Nieuwbouw Spinoza20first",
 
       },
       {
-        image:Project1Img,
+        image:AICS,
         title:"Nieuwbouw AICS",
         
       },
       {
-        image:Project1Img,
+        image:BosTheater,
         title:"Renovatie Bostheater",
         
       },
     ],
     [
       {
-        image:Project1Img,
-        title:"Nieuwbouw Spinoza20first",
+        image:WereldBurger,
+        title:"Renovatie de Wereldburger",
 
       },
       {
-        image:Project1Img,
-        title:"Nieuwbouw AICS",
+        image:SMuseum,
+        title:"Kwartiermaker Nationaal Slavernijmuseum",
         
       },
       {
-        image:Project1Img,
-        title:"Renovatie Bostheater",
+        image:AMuseum,
+        title:"Renovatie Amsterdam Museum",
         
       },
     ],
     [
       {
-        image:Project1Img,
-        title:"Nieuwbouw Spinoza20first",
+        image:AFC,
+        title:"Sportpark Goed Genoeg & Clubgebouw AFC",
 
       },
       {
-        image:Project1Img,
-        title:"Nieuwbouw AICS",
+        image:NWO,
+        title:"Verbouwing en Nieuwbouw Werven en Overslagpunten",
         
       },
       {
-        image:Project1Img,
-        title:"Renovatie Bostheater",
-        
+        image:Spinoza20,
+        title:"Nieuwbouw AICS",
+        exist:false
       },
     ],
     
