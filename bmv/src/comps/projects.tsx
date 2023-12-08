@@ -55,18 +55,15 @@ function Projects() {
         title:"Verbouwing en Nieuwbouw Werven en Overslagpunten",
         
       },
-      {
-        image:Spinoza20,
-        title:"Nieuwbouw AICS",
-        exist:false
-      },
+      
     ],
     
 
     
   ]
-  const critical = 0.66;
-  const modifier = 0.33;
+  const modifier = 1/projectData.length;
+  const critical = modifier * projectData.length;
+
   const [hovered, setHover] = useState(false);
   const [currentSlide, setSlide] = useState(0);
 
@@ -78,7 +75,7 @@ function Projects() {
 
     if (!hovered) {
       // Start automatic sliding
-      intervalId = setInterval(slide, 3000); // Change slide every 3 seconds (adjust as needed)
+      intervalId = setInterval(slide, 5000); // Change slide every 3 seconds (adjust as needed)
     }
 
     return () => {
