@@ -18,7 +18,7 @@ function Header({setMenu}:any) {
   return (
     <header className={`header ${scrollPosition > 60 ? 'scrolled' : ''}`}>
         <img src={Logo} alt="img not found" className='header__image' />
-        <p className='header__text'
+        <p className='header__text base__menuBtn'
           onClick={()=>{
             setMenu(true)
             console.log('open sesami')

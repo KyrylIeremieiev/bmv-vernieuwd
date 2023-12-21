@@ -8,6 +8,7 @@ import Intro from './comps/intro';
 import Projects from './comps/projects';
 import Org from './comps/org';
 import Menu from './comps/menu';
+import Footer from './comps/footer';
 function App() {
   const [menuOpen, setMenu] = useState(false);
   return (
@@ -23,6 +24,7 @@ function App() {
         <Intro></Intro>
         <Projects></Projects>
         <Org></Org>
+        <Footer></Footer>
       </main>
     </>
   );
