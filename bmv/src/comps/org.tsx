@@ -12,29 +12,34 @@ function Org() {
     {
         title:"Werkwijze",
         content:"De werkgebieden en de expertise van bouwmanagement en maatschappelijk vastgoed overlappen elkaar, vullen elkaar aan en versterken elkaar.",
-        link:""
+        link:"",
+        image: Placeholder
+        
     },
     {
         title:"BMV-teams",
         content:"Bij BMV werken rond de 60 bouwmanagers en project- en procesmanagers maatschappelijk vastgoed, met als thuisbasis een kantoor in het hart van Amsterdam.",
-        link:""
+        link:"",
+        image: Placeholder
     },
     
   ]
+
+  const [currentOrg, setOrg] = useState(0)
   return (
     <section className='Org'>
         <ul className="Org__links">
-            <li className="Org__link Org__linkActive">
-                <h3 className="Org__title">{orgArticles[0].title}</h3>
+            <li className="Org__link">
+                <button className={`Org__title ${currentOrg === 0 ? 'Org__linkActive' : ''}`} onClick={()=>{setOrg(0)}}>{orgArticles[0].title}</button>
             </li>
             <li className="Org__link">
-                <h3 className="Org__title">{orgArticles[1].title}</h3>
+                <button className={`Org__title ${currentOrg === 1 ? 'Org__linkActive' : ''}`} onClick={()=>{setOrg(1)}}>{orgArticles[1].title}</button>
             </li>
             <li className="Org__link">
-                <h3 className="Org__title">{orgArticles[2].title}</h3>
+                <button className={`Org__title ${currentOrg === 2 ? 'Org__linkActive' : ''}`} onClick={()=>{setOrg(2)}}>{orgArticles[2].title}</button>
             </li>
         </ul>
-        <Aorg title={orgArticles[0].title} img={orgArticles[0].image} content={orgArticles[0].content}></Aorg>
+        <Aorg currentOrg={currentOrg} orgArticles={orgArticles}></Aorg>
     </section>
   );
 }

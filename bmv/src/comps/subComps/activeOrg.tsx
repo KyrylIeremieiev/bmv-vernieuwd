@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import Placeholder from "../img/placeholder.jpg"
-function Aorg({img, title, content}:any) {
+function Aorg({currentOrg, orgArticles}:any) {
     return(
         <section className='aorg'>
-            <img src={img} alt="" className="aorg__img" />
-            <h3 className="aorg__title">{title}</h3>
-            <p className="aorg__content">{content}</p>
+            <img src={orgArticles[currentOrg].image} alt="" className="aorg__img" />
+            <h3 className="aorg__title">{orgArticles[currentOrg].title}</h3>
+            <p className="aorg__content">{orgArticles[currentOrg].content}</p>
         </section>
     );
 }
