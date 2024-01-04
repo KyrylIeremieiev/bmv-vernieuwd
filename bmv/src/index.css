@@ -140,7 +140,7 @@ html{
   position: fixed;
   top: 0;
   right: 0;
-  width: 25vw;
+  padding-left: 2rem;
   height: 100vh;
   background: red;
   z-index: 3;
@@ -485,6 +485,8 @@ html{
 
 .aorg__content{
   font-size: 1.5rem;
+  height: 60%;
+  overflow-x: scroll;
 }
 
 .footer{
@@ -512,4 +514,30 @@ html{
 .footer__title{
   font-weight: 500;
   font-size: 1.75rem;
+}
+
+@media screen and (max-width:1000px) {
+  .Org{
+    display: block;
+    height: auto;
+  }
+  .Org__links{
+    width: 100vw;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width:800px) {
+
+  .footer{
+    height: auto;
+  }
+  .footer__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
