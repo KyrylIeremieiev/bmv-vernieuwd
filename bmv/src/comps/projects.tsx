@@ -111,7 +111,7 @@ function Projects() {
   }
 
   return (
-    <section className='Projects'>
+    <section className='Projects' id='projecten'>
         <h2 className='Projects__title'>Onze Projecten</h2>
         <div className='Projects__wrapper'
         style={{ transform: `translateX(${-currentSlide * 100}%)` }}

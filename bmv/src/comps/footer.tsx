@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 function Footer() {
     
   return (
-    <footer className={`footer`}>
+    <footer className={`footer`} id='contact'>
         <ul className='footer__content'>
             <li className='footer__item'>
                 <h3 className='footer__title'>Mail</h3>

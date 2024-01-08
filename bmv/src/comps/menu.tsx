@@ -13,10 +13,10 @@ function Menu({menuOpen, setMenu}:any) {
           <FontAwesomeIcon icon={faX} />
         </p>
         <ul className='menu__links'>
-            <li><a className='menu__link'>Home</a></li>
-            <li><a className='menu__link'>Projecten</a></li>
-            <li><a className='menu__link'>Organisatie</a></li>
-            <li><a className='menu__link'>Contact</a></li>
+            <li><a className='menu__link' href='http://localhost:3000/'>Home</a></li>
+            <li><a className='menu__link' href='http://localhost:3000/#projecten'>Projecten</a></li>
+            <li><a className='menu__link' href='http://localhost:3000/#org'>Organisatie</a></li>
+            <li><a className='menu__link' href='#contact'>Contact</a></li>
         </ul>
     </section>
   );

@@ -27,7 +27,7 @@ function Org() {
 
   const [currentOrg, setOrg] = useState(0)
   return (
-    <section className='Org'>
+    <section className='Org' id='org'>
         <ul className="Org__links">
             <li className="Org__link">
                 <button className={`Org__title ${currentOrg === 0 ? 'Org__linkActive' : ''}`} onClick={()=>{setOrg(0)}}>{orgArticles[0].title}</button>
