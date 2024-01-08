@@ -494,6 +494,42 @@ html{
   overflow-x: scroll;
 }
 
+.projectPage{
+  padding-top: 20vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  gap: 2rem;
+  box-sizing: border-box;
+  
+}
+
+.projectPage__imgBox{
+  width: 70%;
+  height: 70%;
+}
+
+.projectPage__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.45rem;
+}
+
+.projectPage__info{
+  width: 60%;
+}
+.projectPage__title{
+  color: red;
+  font-size: 2.75rem;
+}
+
+.projectPage__content{
+  font-size: 1.25rem;
+}
+
 .footer{
   height: 15rem;
   background: #0F0F0F;
