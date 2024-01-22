@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import Spinoza from "../img/banner.jpeg";
-import AICS from "../img/AICS.jpeg"
+import Spinoza from "../img/banner.webp";
+import AICS from "../img/AICS.webp"
 import { useState } from "react";
 
 interface Project {
@@ -41,7 +41,7 @@ function ProjectPage() {
   return (
     <section className="projectPage">
       <figure className="projectPage__imgBox">
-        <img className="projectPage__img" src={currentProject.img} alt="Project Image" />
+        <img className="projectPage__img" src={currentProject.img} alt="Project Image" loading='lazy'/>
       </figure>
       <article className="projectPage__info">
         <h3 className="projectPage__title">{currentProject.title}</h3>

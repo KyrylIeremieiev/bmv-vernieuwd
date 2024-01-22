@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import  Project  from './subComps/project';
-import Spinoza20 from '../img/banner.jpeg'
-import AICS from '../img/niewbouw.jpeg';
-import BosTheater from '../img/bostheater.jpeg';
-import WereldBurger from '../img/wereldburger.jpeg';
-import SMuseum from '../img/slavernijmuseum.png';
-import AMuseum from '../img/amuseum.jpeg';
-import AFC from '../img/afc.jpeg';
-import NWO from '../img/nwo.png'
+import Spinoza20 from '../img/banner.webp'
+import AICS from '../img/niewbouw.webp';
+import BosTheater from '../img/bostheater.webp';
+import WereldBurger from '../img/wereldburger.webp';
+import SMuseum from '../img/slavernijmuseum.webp';
+import AMuseum from '../img/amuseum.webp';
+import AFC from '../img/afc.webp';
+import NWO from '../img/nwo.webp'
 function Projects() {
   const projectData= [
     [

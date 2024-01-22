@@ -6,7 +6,7 @@ function Project({image, title, exist}:any){
     <>
       <article className={`sProject ${exist ==false ? "non-exist":""}`}>
           <div className='sProject__wrapper'>
-            <img className='sProject__img' src={image}></img>
+            <img className='sProject__img' src={image} loading='lazy' alt='img of project'></img>
           </div>
           <h3 className='sProject__title'>{title}</h3>
       </article>
