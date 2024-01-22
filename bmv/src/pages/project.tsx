@@ -54,7 +54,7 @@ function ProjectPage() {
             }
             setClosed(true);
         }}>Read More...</button>
-        <a href={currentProject.link}>{currentProject.link}</a>
+        <h4>Klant:<a href={currentProject.link}>{currentProject.link}</a></h4>
       </article>
     </section>
   );

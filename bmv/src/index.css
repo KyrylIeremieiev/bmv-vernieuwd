@@ -37,6 +37,10 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+html{
+  overflow-x: hidden;
+}
+
 body {
   line-height: 1;
   overflow-x: hidden;
@@ -45,6 +49,7 @@ body {
 
 main{
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 ol, ul {
@@ -607,9 +612,24 @@ html{
     justify-content: center;
     
   }
-  .Projects__wrapper{
+  .sProject__title{
+    font-size: 1.5rem;
+    
     
   }
+
+  .projectPage{
+    flex-direction: column;
+
+  }
+  .projectPage__imgBox{
+    width: 100%;
+  }
+
+  .projectPage__info{
+    width: 100%;
+  }
+  
 }
 
 @media screen and (max-width:800px) {
@@ -622,5 +642,43 @@ html{
     grid-template-columns: 1fr 1fr;
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .sProject__title{
+    font-size: 1.5rem;
+    padding: 0.75rem;
+    padding-left: 0;
+    
+  }
+
+  
+}
+
+
+@media screen and (max-width:500px) {
+  .welcome{
+    padding: 1rem;
+   }
+ 
+   .intro__article{
+     padding: 1rem;
+   }
+ 
+   .Projects{
+     padding: 0.5rem;
+   }
+ 
+   .Org{
+     padding: 1rem;
+   }
+ 
+   .footer{
+     padding: 1rem;
+   }
+
+   .sProject__title{
+    font-size: 0.75rem;
+    
+    
   }
 }
