@@ -219,6 +219,7 @@ html{
 }
 
 .welcome__img{
+  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -426,6 +427,12 @@ html{
  
 }
 
+.Org__link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .Org__links{
   display: flex;
   flex-direction: column;
@@ -547,6 +554,7 @@ html{
 
 .projectImg{
   padding-top: 2rem;
+
 }
 
 .closed{
@@ -648,6 +656,16 @@ html{
     
   }
 
+  .projectImg{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+  }
+
+  .projectPageExtraImg{
+    width: 90%;
+  }
+
   
 }
 
@@ -677,5 +695,17 @@ html{
     font-size: 0.75rem;
     
     
+  }
+
+  .welcome__title{
+    font-size: 2rem;
+  }
+
+  .footer__text{
+    font-size: 1rem;
+  }
+
+  .footer__title{
+    font-size: 1.4rem;
   }
 }

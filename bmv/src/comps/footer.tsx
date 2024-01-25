@@ -10,7 +10,7 @@ function Footer() {
                 <p className='footer__text footer__link'>{"> Contact"}</p>
             </li>
             <li className='footer__item'>
-                <h3 className='footer__title'>Volg het ProjectManagement Bureau</h3>
+                <h3 className='footer__title'>Volg het Project Management Bureau</h3>
                 <p className='footer__text footer__link'>{"> LinkedIn"}</p>
                 <p className='footer__text footer__link'>{"> Twitter"}</p>
             </li>

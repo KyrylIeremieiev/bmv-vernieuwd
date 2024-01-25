@@ -201,7 +201,7 @@ function ProjectPage() {
       <p className={currentProject.fotograaf}>{currentProject.fotograaf}</p>
       {currentProject.extra.map((obj) => (
         <figure className="projectImg">
-          <img src={obj.img} alt="image not found" />
+          <img className="projectPageExtraImg"src={obj.img} alt="image not found" />
           <figcaption className={obj.figcap}>{obj.figcap}</figcaption>
         </figure>
       ))}
