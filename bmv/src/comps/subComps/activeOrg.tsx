@@ -8,7 +8,7 @@ function Aorg({currentOrg, orgArticles}:any) {
             </div>
             
             <h3 className="aorg__title">{orgArticles[currentOrg].title}</h3>
-            <p className="aorg__content">{orgArticles[currentOrg].content}</p>
+            <p className="aorg__content" dangerouslySetInnerHTML={{__html: orgArticles[currentOrg].content}}></p>
             <p className={orgArticles[currentOrg].link}>{orgArticles[currentOrg].linkText} <a href={orgArticles[currentOrg].link}>{orgArticles[currentOrg].link}</a></p>
         </section>
     );
