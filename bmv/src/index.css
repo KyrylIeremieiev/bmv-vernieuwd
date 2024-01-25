@@ -31,11 +31,7 @@ button:hover{
   cursor: pointer;
 }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+
 
 html{
   overflow-x: hidden;
@@ -99,9 +95,6 @@ html{
   left: 0;
   width: 100vw;
   height: 12vh;
-/*   padding: 0.5rem;
-  padding-left: 2rem;
-  padding-right: 2rem; */
   display: flex;
   justify-content: space-between;
   padding-top: 0.5rem;
@@ -220,7 +213,7 @@ html{
   height: 93vh;
   
   
-  background-size: cover;
+  
   position: relative; /* Needed to position the cutout text in the middle of the image */
   padding: 2rem;
 }
@@ -233,24 +226,6 @@ html{
   height: 100%;
   z-index: -1;
 }
-
-
-/* .text{
-  background-color: white; 
-  color: red;
-  font-size: 7vw; 
-  font-weight: bold;
-  margin: 0 auto;
-  padding: 2rem;
-  padding-bottom: 5rem;
-  width: 100%;
-  height: 100%;
-  position: absolute; 
-  top: 0;
-  left: 0; 
-  mix-blend-mode: screen;
-  
-} */
 
 .text{
   display: flex;
@@ -310,6 +285,8 @@ html{
   gap: 3vw;
   width: 100vw;
 }
+
+
 
 .fadeIn{
   animation: fadin 3s infinite;
@@ -403,12 +380,6 @@ html{
 }
 
 
-
-/* Slideshow */
-
-
-/* Slideshow */
-
 .slideshow {
   margin: 0 auto;
   overflow: hidden;
@@ -494,9 +465,15 @@ html{
   gap: 1rem;
 }
 
-.aorg__img{
+.aorg__imgWrapper{
   width: 100%;
   height: 60%;
+}
+
+.aorg__img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .aorg__title{
@@ -518,7 +495,6 @@ html{
   display: flex;
   gap: 2rem;
   box-sizing: border-box;
-  padding-bottom: 10rem;
 }
 
 .projectPage__imgBox{
@@ -554,6 +530,23 @@ html{
 
 .projectPage__link{
   font-size: 1.25rem;
+}
+
+.projectPage__subtitle{
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.projectPage__bottom{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 10rem;
+}
+
+.projectImg{
+  padding-top: 2rem;
 }
 
 .closed{
@@ -598,6 +591,10 @@ html{
 .footer__link:hover{
   cursor: pointer;
   filter: brightness(0.7);
+}
+
+.none{
+  display: none;
 }
 
 @media screen and (max-width:1000px) {

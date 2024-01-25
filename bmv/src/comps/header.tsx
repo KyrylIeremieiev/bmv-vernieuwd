@@ -17,7 +17,9 @@ function Header({setMenu}:any) {
     }, []);
   return (
     <header className={`header ${scrollPosition > 60 ? 'scrolled' : ''}`}>
+        <a href='http://localhost:3000/'>
         <img src={Logo} alt="img not found" className='header__image' loading='lazy'/>
+        </a>
         <p className='header__text base__menuBtn'
           onClick={()=>{
             setMenu(true)

@@ -14,46 +14,46 @@ function Projects() {
       {
         image:Spinoza20,
         title:"Nieuwbouw Spinoza20first",
-
+        link:"Spinoza20first"
       },
       {
         image:AICS,
         title:"Nieuwbouw AICS",
-        
+        link:"AICS"
       },
       {
         image:BosTheater,
         title:"Renovatie Bostheater",
-        
+        link:"Bostheater"
       },
     ],
     [
       {
         image:WereldBurger,
         title:"Renovatie de Wereldburger",
-
+        link:"Wereldburger"
       },
       {
         image:SMuseum,
         title:"Kwartiermaker Nationaal Slavernijmuseum",
-        
+        link:"NS"
       },
       {
         image:AMuseum,
         title:"Renovatie Amsterdam Museum",
-        
+        link:"AM"
       },
     ],
     [
       {
         image:AFC,
         title:"Sportpark Goed Genoeg & Clubgebouw AFC",
-
+        link:"SGGC"
       },
       {
         image:NWO,
         title:"Verbouwing en Nieuwbouw Werven en Overslagpunten",
-        
+        link:"NWO"
       },
       
     ],
@@ -127,6 +127,7 @@ function Projects() {
                   <Project 
                     image={item.image} 
                     title={item.title}
+                    link={item.link}
                   >
                   </Project>
                 </li>             

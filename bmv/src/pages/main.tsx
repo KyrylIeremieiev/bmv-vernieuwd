@@ -10,6 +10,7 @@ function Main() {
 
     <Welcome></Welcome>
     <Intro></Intro>
+    
     <Projects></Projects>
     <Org></Org>
 

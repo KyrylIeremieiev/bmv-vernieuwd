@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import React from 'react';
-function Project({image, title, exist}:any){
-  
+function Project({image, title, exist, link}:any){
+  const travel = () =>{
+    window.location.href = "http://localhost:3000/project/" + link;
+  }
   return (
     <>
-      <article className={`sProject ${exist ==false ? "non-exist":""}`}>
+      <article onClick={()=>{travel()}} className={`sProject ${exist ==false ? "non-exist":""}`}>
           <div className='sProject__wrapper'>
             <img className='sProject__img' src={image} loading='lazy' alt='img of project'></img>
           </div>
