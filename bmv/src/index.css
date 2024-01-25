@@ -595,10 +595,12 @@ html{
 
 .footer__link{
   transition: 0.5s all;
+  color: #F7EFE5;
+  text-decoration: none;
 }
 .footer__link:hover{
-  cursor: pointer;
-  filter: brightness(0.7);
+  cursor: pointer !important;
+  filter: brightness(0.7) !important;
 }
 
 .none{

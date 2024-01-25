@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import React from 'react';
 function Project({image, title, exist, link}:any){
   const travel = () =>{
-    window.location.href = "http://localhost:3000/project/" + link;
+    window.location.href = "https://portfolio.kyryl.dev/project/" + link;
   }
   return (
     <>
