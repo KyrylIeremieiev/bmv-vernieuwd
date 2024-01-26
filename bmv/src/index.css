@@ -502,6 +502,7 @@ html{
   display: flex;
   gap: 2rem;
   box-sizing: border-box;
+  padding-bottom: 5rem;
 }
 
 .projectPage__imgBox{

@@ -177,6 +177,10 @@ function ProjectPage() {
     <section className="projectPage">
       <figure className="projectPage__imgBox">
         <img className="projectPage__img" src={currentProject.img} alt="Project Image" loading='lazy'/>
+        <figcaption>
+          <p className={currentProject.ontwerp}>{currentProject.ontwerp}</p>
+          <p className={currentProject.fotograaf}>{currentProject.fotograaf}</p>
+        </figcaption>
       </figure>
       <article className="projectPage__info">
         <h3 className="projectPage__title">{currentProject.title}</h3>
@@ -197,8 +201,6 @@ function ProjectPage() {
       
     </section>
     <section className="projectPage__bottom">
-      <p className={currentProject.ontwerp}>{currentProject.ontwerp}</p>
-      <p className={currentProject.fotograaf}>{currentProject.fotograaf}</p>
       {currentProject.extra.map((obj) => (
         <figure className="projectImg">
           <img className="projectPageExtraImg"src={obj.img} alt="image not found" />
